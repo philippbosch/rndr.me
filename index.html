@@ -96,11 +96,11 @@ mkdir my_renderer
 <span class="c"># Create a git repo with rndr.me and a Procfile</span>
 git init
 git submodule add git://github.com/jed/rndr.me.git
-<span class="nb">echo</span> <span class="s2">"web: phantomjs rndr/server.js"</span> &gt; Procfile
+<span class="nb">echo</span> <span class="s2">"web: phantomjs rndr.me/server.js"</span> &gt; Procfile
 
 <span class="c"># Create a new Heroku app with the PhantomJS buildpack</span>
 heroku apps:create
-heroku config:add <span class="nv">BUILDPACK_URL</span><span class="o">=</span>http://github.com/stomita/heroku-buildpack-phantomjs.git
+heroku config:add <span class="nv">BUILDPACK_URL</span><span class="o">=</span>https://github.com/stomita/heroku-buildpack-phantomjs.git
 
 <span class="c"># Push your code</span>
 git add .
